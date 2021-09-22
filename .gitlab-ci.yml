@@ -1,0 +1,31 @@
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+build_develop:
+  image: node:latest
+  stage: build
+  environment: Development
+  only:
+    - development
+  script:
+    - yarn install
+    - yarn build
+
+deploy_develop:
+  stage: deploy
+  image: ubuntu:latest
+  only:
+    - development
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - ssh ubuntu@"$DEV_SERVER" "sh deploy-scripts/color-profile-editor.sh"
