@@ -3,7 +3,7 @@ import NoteForm from "components/NoteForm";
 import NoteContext from "contexts/note";
 import { useContext } from "react";
 
-const NoteCard = ({ id, title }) => {
+const NoteCard = ({ id, title, mainLabel, animationLabel }) => {
   const { main, animation } = useContext(NoteContext);
 
   return (
@@ -18,7 +18,7 @@ const NoteCard = ({ id, title }) => {
           <div className="card-body">
             <h5 className="card-title text-center">{title}</h5>
             <div className="mt-3">
-              <NoteForm />
+              <NoteForm mainLabel={mainLabel} animationLabel={animationLabel} />
             </div>
           </div>
         </div>

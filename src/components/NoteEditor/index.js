@@ -28,7 +28,12 @@ const NoteEditor = () => {
           setAnimation: setGreenAnimation,
         }}
       >
-        <NoteCard id="green" title="Green Note" />
+        <NoteCard
+          id="green"
+          title="Green Note"
+          mainLabel="NOTE_GREEN"
+          animationLabel="NOTE_ANIM_GREEN"
+        />
       </NoteContext.Provider>
 
       <NoteContext.Provider
@@ -39,7 +44,12 @@ const NoteEditor = () => {
           setAnimation: setRedAnimation,
         }}
       >
-        <NoteCard id="red" title="Red Note" />
+        <NoteCard
+          id="red"
+          title="Red Note"
+          mainLabel="NOTE_RED"
+          animationLabel="NOTE_ANIM_RED"
+        />
       </NoteContext.Provider>
 
       <NoteContext.Provider
@@ -50,7 +60,12 @@ const NoteEditor = () => {
           setAnimation: setYellowAnimation,
         }}
       >
-        <NoteCard id="yellow" title="Yellow Note" />
+        <NoteCard
+          id="yellow"
+          title="Yellow Note"
+          mainLabel="NOTE_YELLOW"
+          animationLabel="NOTE_ANIM_YELLOW"
+        />
       </NoteContext.Provider>
 
       <NoteContext.Provider
@@ -61,7 +76,12 @@ const NoteEditor = () => {
           setAnimation: setBlueAnimation,
         }}
       >
-        <NoteCard id="blue" title="Blue Note" />
+        <NoteCard
+          id="blue"
+          title="Blue Note"
+          mainLabel="NOTE_BLUE"
+          animationLabel="NOTE_ANIM_BLUE"
+        />
       </NoteContext.Provider>
 
       <NoteContext.Provider
@@ -72,7 +92,12 @@ const NoteEditor = () => {
           setAnimation: setOrangeAnimation,
         }}
       >
-        <NoteCard id="orange" title="Orange Note" />
+        <NoteCard
+          id="orange"
+          title="Orange Note"
+          mainLabel="NOTE_ORANGE"
+          animationLabel="NOTE_ANIM_ORANGE"
+        />
       </NoteContext.Provider>
     </>
   );
