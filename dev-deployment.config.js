@@ -5,6 +5,6 @@ module.exports = {
   env: {
     NODE_ENV: "production",
     PM2_SERVE_PATH: "build",
-    PM2_SERVE_PORT: 10001,
+    PM2_SERVE_PORT: 10002,
   },
 };
