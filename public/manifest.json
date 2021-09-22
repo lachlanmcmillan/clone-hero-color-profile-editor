@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Color Profile Editor",
+  "name": "Color Profile Editor for Clone Hero",
   "icons": [
     {
       "src": "favicon.ico",

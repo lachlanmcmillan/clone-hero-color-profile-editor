@@ -43,6 +43,9 @@ const InputColor = ({ label, color, setColor }) => {
             />
           </div>
         ) : null}
+        <div className="col">
+          <label className="form-label fs-5">{color}</label>
+        </div>
       </div>
     </div>
   );
