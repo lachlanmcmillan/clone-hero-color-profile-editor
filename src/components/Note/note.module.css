@@ -1,0 +1,21 @@
+.sprites-container {
+  position: relative;
+  width: 95px;
+  height: 50px;
+}
+
+.sprite {
+  position: absolute;
+}
+
+.note-light {
+  z-index: 3;
+}
+
+.note-body {
+  z-index: 1;
+}
+
+.note-base {
+  z-index: 2;
+}

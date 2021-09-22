@@ -1,0 +1,27 @@
+.swatch {
+  padding: 5px;
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.color {
+  width: 50px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.popover {
+  position: absolute;
+  z-index: 999;
+}
+
+.cover {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
