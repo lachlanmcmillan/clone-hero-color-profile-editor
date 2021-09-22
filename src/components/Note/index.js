@@ -25,12 +25,36 @@ function drawImage(id, img, isLoaded = function () {}) {
   };
 }
 
-function changeColor(id, img, color) {
+function changeBodyColor(id, img, color) {
+  const canvas = document.getElementById(id);
+  const ctx = canvas.getContext("2d");
+
+  const tmpCanvas = document.createElement("canvas");
+  const tmpCxt = tmpCanvas.getContext("2d");
+
+  tmpCanvas.width = NOTE_WIDTH;
+  tmpCanvas.height = NOTE_HEIGHT;
+
+  ctx.clearRect(0, 0, NOTE_WIDTH, NOTE_HEIGHT);
+  ctx.drawImage(img, 0, 0);
+
+  tmpCxt.drawImage(img, 0, 0);
+  tmpCxt.globalCompositeOperation = "source-atop";
+  tmpCxt.fillStyle = color;
+  tmpCxt.fillRect(0, 0, NOTE_WIDTH, NOTE_HEIGHT);
+
+  ctx.globalCompositeOperation = "multiply";
+  ctx.drawImage(tmpCanvas, 0, 0);
+  ctx.globalCompositeOperation = "source-over";
+}
+
+function changeLightColor(id, img, color) {
   const canvas = document.getElementById(id);
   const ctx = canvas.getContext("2d");
 
   ctx.clearRect(0, 0, NOTE_WIDTH, NOTE_HEIGHT);
   ctx.drawImage(img, 0, 0);
+
   ctx.globalCompositeOperation = "source-in";
   ctx.fillStyle = color;
   ctx.fillRect(0, 0, NOTE_WIDTH, NOTE_HEIGHT);
@@ -59,7 +83,7 @@ const Note = ({ id, lightColor, bodyColor }) => {
   useEffect(
     function () {
       if (lightColor) {
-        changeColor(lightIdRef.current, lightImgRef.current, lightColor);
+        changeLightColor(lightIdRef.current, lightImgRef.current, lightColor);
       }
     },
     [lightLoaded, lightColor]
@@ -68,7 +92,7 @@ const Note = ({ id, lightColor, bodyColor }) => {
   useEffect(
     function () {
       if (bodyColor) {
-        changeColor(bodyIdRef.current, bodyImgRef.current, bodyColor);
+        changeBodyColor(bodyIdRef.current, bodyImgRef.current, bodyColor);
       }
     },
     [bodyLoaded, bodyColor]
