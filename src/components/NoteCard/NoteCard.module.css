@@ -1,0 +1,7 @@
+.notecard {
+	margin: 5px;
+	width: 140px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

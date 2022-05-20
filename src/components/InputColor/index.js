@@ -3,7 +3,7 @@ import { ChromePicker } from "react-color";
 import reactCSS from "reactcss";
 import styles from "./input-color.module.css";
 
-const InputColor = ({ label, color, setColor }) => {
+const InputColor = ({ label, color, onPickColor }) => {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
   function handleClick() {
@@ -15,7 +15,7 @@ const InputColor = ({ label, color, setColor }) => {
   }
 
   function handleChange({ hex }) {
-    setColor(hex);
+    onPickColor(hex);
   }
 
   const customStyles = reactCSS({
@@ -27,11 +27,13 @@ const InputColor = ({ label, color, setColor }) => {
   });
 
   return (
-    <div className="mb-3">
-      <label className="form-label">{label}</label>
-      <div className="col">
+    <div className={styles.inputcolor}>
+      {label}
+      <div className="">
         <div className={styles.swatch} onClick={handleClick}>
-          <div className={styles.color} style={customStyles.color} />
+          <div className={styles.color} style={customStyles.color}>
+            {color}
+          </div>
         </div>
         {displayColorPicker ? (
           <div className={styles.popover}>
@@ -43,9 +45,6 @@ const InputColor = ({ label, color, setColor }) => {
             />
           </div>
         ) : null}
-        <div className="col">
-          <label className="form-label fs-5">{color}</label>
-        </div>
       </div>
     </div>
   );

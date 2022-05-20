@@ -1,20 +1,31 @@
 import InputColor from "components/InputColor";
-import NoteContext from "contexts/note";
+import { EditorContext } from "contexts/EditorContext";
 import { useContext } from "react";
 
-const NoteForm = ({ mainLabel, animationLabel }) => {
-  const { main, setMain, animation, setAnimation } = useContext(NoteContext);
+const NoteForm = ({ mainLabel, animationLabel, section }) => {
+  const { config, setColor } = useContext(EditorContext);
+
+  const handlePickColorMain = (hex) => {
+    setColor(section, mainLabel, hex);
+  }
+
+  const handlePickColorAnim = (hex) => {
+    setColor(section, animationLabel, hex);
+  }
+
   return (
-    <form>
-      <div className="d-flex justify-content-evenly text-center">
-        <InputColor label={mainLabel} color={main} setColor={setMain} />
-        <InputColor
-          label={animationLabel}
-          color={animation}
-          setColor={setAnimation}
-        />
-      </div>
-    </form>
+    <>
+      <InputColor 
+        label={mainLabel} 
+        color={config[section][mainLabel]} 
+        onPickColor={handlePickColorMain} 
+      />
+      <InputColor
+        label={animationLabel}
+        color={config[section][animationLabel]} 
+        onPickColor={handlePickColorAnim} 
+      />
+    </>
   );
 };
 

@@ -1,0 +1,22 @@
+.logo {
+	display: inline-block;
+	justify-content: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.img {
+	display: block;
+	margin: 30px;
+}
+
+.text {
+	color: white;
+	font-size: 7rem;
+	text-align: center;
+	margin-top: 0;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: -0.5rem;
+
+	text-shadow: 4px 4px 4px rgba(10,10,10,0.3);
+}

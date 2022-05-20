@@ -1,5 +1,13 @@
+.inputcolor {
+  text-align: center;
+  width: 100%;
+}
+
 .swatch {
-  padding: 5px;
+  background: white;
+  width: 100%;
+  margin: 10px 0;
+  padding: 4px;
   background: #fff;
   border-radius: 1px;
   box-shadow: 0 0 0 1px rgba(0,0,0,.1);
@@ -8,9 +16,10 @@
 }
 
 .color {
-  width: 50px;
-  height: 14px;
+  width: 100%;
+  height: 22px;
   border-radius: 2px;
+  text-align: center;
 }
 
 .popover {

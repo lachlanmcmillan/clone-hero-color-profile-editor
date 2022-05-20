@@ -1,6 +1,7 @@
 import classNames from "classnames";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./note.module.css";
+import { EditorContext } from "contexts/EditorContext";
 
 const NOTE_WIDTH = 95;
 const NOTE_HEIGHT = 50;
@@ -61,7 +62,11 @@ function changeLightColor(id, img, color) {
   ctx.globalCompositeOperation = "source-over";
 }
 
-const Note = ({ id, lightColor, bodyColor }) => {
+const Note = ({ id, section, mainLabel, animationLabel }) => {
+  const { config } = React.useContext(EditorContext);
+  const bodyColor = config[section][mainLabel];
+  const lightColor = config[section][animationLabel];
+
   const [lightLoaded, setLightLoaded] = useState(false);
   const [bodyLoaded, setBodyLoaded] = useState(false);
 
