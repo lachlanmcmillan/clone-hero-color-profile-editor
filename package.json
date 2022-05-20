@@ -1,7 +1,8 @@
 {
-  "name": "ch-color-tool",
+  "name": "clone-hero-color-profile-editor",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://lachlanmcmillan.github.io/clone-hero-color-profile-editor/",
   "dependencies": {
     "classnames": "^2.3.1",
     "file-saver": "^2.0.5",
