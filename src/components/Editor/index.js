@@ -8,14 +8,14 @@ import { ButtonBar } from "components/ButtonBar";
 import { InstrumentMenu } from "components/InstrumentMenu";
 import { parseIni, generateIni } from "util/ini";
 import { fileToText } from "util/fileToText";
+import { defaultConfig } from "util/defaultConfig.ini";
 
 import styles from "./Editor.module.css";
-import { DefaultColors } from "./DefaultColors.ini";
 
 export const Editor = (props) => {
-  const [file, setFile] = React.useState(DefaultColors);
-  const [filename, setFilename] = React.useState("clone-hero-note-editor.ini");
-  const [config, setConfig] = React.useState(parseIni(DefaultColors));
+  const [file, setFile] = React.useState(defaultConfig);
+  const [filename, setFilename] = React.useState("clone-hero-color-editor.ini");
+  const [config, setConfig] = React.useState(parseIni(defaultConfig));
   const [instrument, setInstrument] = React.useState("guitar");
 
   const setColor = (section, label, value) => {

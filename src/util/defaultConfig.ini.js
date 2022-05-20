@@ -1,4 +1,4 @@
-export const DefaultColors = `[other]
+export const defaultConfig = `[other]
 combo_sp_active_glow = #FFFFFF
 combo_four_glow = #E8B1FF
 combo_three_glow = #F0FFF0
