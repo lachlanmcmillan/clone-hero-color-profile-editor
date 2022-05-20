@@ -2,13 +2,16 @@ import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./note.module.css";
 import { EditorContext } from "contexts/EditorContext";
+import NOTE_LIGHT_SPRITE from "./note_light.png";
+import NOTE_BODY_SPRITE  from "./note_body.png";
+import NOTE_BASE_SPRITE  from "./note_base.png";
 
 const NOTE_WIDTH = 95;
 const NOTE_HEIGHT = 50;
 
-const NOTE_LIGHT_SPRITE = "sprites/note_light.png";
-const NOTE_BODY_SPRITE = "sprites/note_body.png";
-const NOTE_BASE_SPRITE = "sprites/note_base.png";
+// const NOTE_LIGHT_SPRITE = "sprites/note_light.png";
+// const NOTE_BODY_SPRITE = "sprites/note_body.png";
+// const NOTE_BASE_SPRITE = "sprites/note_base.png";
 
 function createImage(src) {
   const img = new Image();
