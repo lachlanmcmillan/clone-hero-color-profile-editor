@@ -1,9 +1,9 @@
 .drumeditor {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 .row {
-	display: flex;
-	margin: auto;
-	justify-content: center;
+  display: flex;
+  margin: auto;
+  justify-content: center;
 }

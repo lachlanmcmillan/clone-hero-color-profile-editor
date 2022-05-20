@@ -33,7 +33,7 @@ export const DrumEditor = () => {
           mainLabel="cym_green"
           animationLabel="cym_anim_green"
         />
-      </div>      
+      </div>
 
       <div className={styles.row}>
         <NoteCard

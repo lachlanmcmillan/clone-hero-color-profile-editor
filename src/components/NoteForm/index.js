@@ -7,23 +7,23 @@ const NoteForm = ({ mainLabel, animationLabel, section }) => {
 
   const handlePickColorMain = (hex) => {
     setColor(section, mainLabel, hex);
-  }
+  };
 
   const handlePickColorAnim = (hex) => {
     setColor(section, animationLabel, hex);
-  }
+  };
 
   return (
     <>
-      <InputColor 
-        label={mainLabel} 
-        color={config[section][mainLabel]} 
-        onPickColor={handlePickColorMain} 
+      <InputColor
+        label={mainLabel}
+        color={config[section][mainLabel]}
+        onPickColor={handlePickColorMain}
       />
       <InputColor
         label={animationLabel}
-        color={config[section][animationLabel]} 
-        onPickColor={handlePickColorAnim} 
+        color={config[section][animationLabel]}
+        onPickColor={handlePickColorAnim}
       />
     </>
   );

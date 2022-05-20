@@ -1,13 +1,13 @@
 .ButtonBar {
-	display: flex;
-	justify-content: center;	
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
-	font-size: 1.2rem;
-	color: white;
-	border: 2px solid white;
-	background: none;
-	margin: 5px;
-	padding: 3px 20px;
+  font-size: 1.2rem;
+  color: white;
+  border: 2px solid white;
+  background: none;
+  margin: 5px;
+  padding: 3px 20px;
 }

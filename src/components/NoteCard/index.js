@@ -8,8 +8,17 @@ import styles from "./NoteCard.module.css";
 const NoteCard = ({ id, title, mainLabel, animationLabel, section }) => {
   return (
     <div className={styles.notecard}>
-      <Note id={id} mainLabel={mainLabel} animationLabel={animationLabel} section={section} />
-      <NoteForm mainLabel={mainLabel} animationLabel={animationLabel} section={section} />
+      <Note
+        id={id}
+        mainLabel={mainLabel}
+        animationLabel={animationLabel}
+        section={section}
+      />
+      <NoteForm
+        mainLabel={mainLabel}
+        animationLabel={animationLabel}
+        section={section}
+      />
     </div>
   );
 };

@@ -128,4 +128,4 @@ note_yellow = #FFFF00
 note_red = #FF0000
 note_green = #00FF00
 
-`
+`;
