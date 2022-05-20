@@ -2,6 +2,8 @@
 
 Visit [https://lachlanmcmillan.github.io/clone-hero-color-profile-editor/](https://lachlanmcmillan.github.io/clone-hero-color-profile-editor/).
 
+![screenshot](screenshot.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
